@@ -16,5 +16,17 @@ Spring boot 3.2.0-snapshot
 <br />
 Mysql
 
+## 메세지
+코드 그대로 가져다 붙이고 
+application-API-KEY.properties 파일 생성 후
+<br />
+REST_API_KEY = {내 어플리케이션 ->REST API 키}
+<br />
+REDIRECT_URL = {리다이렉트 주소}
+<br />
+
+카카오 디벨로퍼 주소(생성 및 REST_API_KEY 확인)
+https://developers.kakao.com/console/app/ 
+
 ## 참고 링크
 카카오 공식 문서 - https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api
