@@ -1,7 +1,6 @@
 package com.oauth.kakaologin.kakao;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletResponse;
@@ -15,9 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.Map;
 
 @Service
 public class KakaoUserService {
@@ -65,7 +61,7 @@ public class KakaoUserService {
         return accessToken;
     }
 
-    // #2. 엑세스토큰으로 유저정보 가져오기  2번 방법
+    // #2. 엑세스토큰으로 유저정보 가져오기
     private KakaoLoginInfoDto getKakaoUserInfo(String accessToken) throws JsonProcessingException {
         // HTTP Header 생성
         HttpHeaders headers = new HttpHeaders();
