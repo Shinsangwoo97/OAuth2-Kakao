@@ -1,5 +1,6 @@
 package com.oauth.kakaologin.kakao;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ public class KakaoController {
 ///oauth/kakao
     @ResponseBody
     @GetMapping("/oauth/kakao")
-    public ResponseEntity kakaoCallback(@RequestParam String code, HttpServletResponse response){
+    public ResponseEntity kakaoCallback(@RequestParam String code, HttpServletResponse response) throws JsonProcessingException {
         String response1 = "성공적으로 카카오 로그인 API 코드를 불러왔습니다.";
         System.out.println("코드 : " + code + " 리스폰스 :" + response);
         kakaoUserService.kakaoLogin(code, response);
