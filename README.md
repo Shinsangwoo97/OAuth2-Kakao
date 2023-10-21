@@ -24,7 +24,11 @@ REST_API_KEY = {내 어플리케이션 ->REST API 키}
 <br />
 REDIRECT_URL = {리다이렉트 주소}
 <br />
-작성하면 됨 세팅끝
+.gitignore 추가시 
+<br />
+**/application-API-KEY.properties
+<br />
+세팅끝
 
 카카오 디벨로퍼 주소(생성 및 REST_API_KEY 확인)
 https://developers.kakao.com/console/app/ 
