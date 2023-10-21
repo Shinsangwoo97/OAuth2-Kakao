@@ -36,5 +36,5 @@ out/
 ### VS Code ###
 .vscode/
 ### 보안 예외처리 ###
-application.properties
-application-API-KEY.properties
+**/application.properties
+**/application-API-KEY.properties
