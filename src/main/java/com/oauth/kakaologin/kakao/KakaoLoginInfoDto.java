@@ -10,10 +10,4 @@ public class KakaoLoginInfoDto {
     private String nickname;
     private String email;
     private String profileImgUrl;
-
-    public KakaoLoginInfoDto(String nickname, String email, String profileImgUrl) {
-        this.nickname = nickname;
-        this.email = email;
-        this.profileImgUrl = profileImgUrl;
-    }
 }
