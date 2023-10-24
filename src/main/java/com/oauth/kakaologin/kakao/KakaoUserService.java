@@ -32,11 +32,12 @@ public class KakaoUserService {
     private UserRepository userRepository;
 
     public void kakaoLogin(String code, HttpServletResponse response) throws JsonProcessingException {
+        // 1. 인가코드로 엑세스토큰 가져오기
         String accessToken = getAccessToken(code);
+        // 2. 엑세스토큰으로 유저정보 가져오기
         KakaoLoginInfoDto kakaoUserInfo = getKakaoUserInfo(accessToken);
-        System.out.println("---------------시작 하나요");
+        // 3. 유저확인 & 회원가입
         User foundUser = kakaoUserCheckAndRegister(kakaoUserInfo);
-        System.out.println("foundUser: " + foundUser);
     }
 
     // #1 - 인가코드로 엑세스토큰 가져오기
@@ -126,5 +127,4 @@ public class KakaoUserService {
         }
         return kakaoUser;
     }
-
 }
